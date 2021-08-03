@@ -1,0 +1,41 @@
+/**
+GRUPO:  EVERTON SANTOS BARRETO JUNIOR
+        LUCAS CAMPOS TAVANO
+**/
+
+ JOGO: THREE MEN'S MORRIS
+
+Foi estudado pela equipe o algorítmo MiniMax (que utiliza árvore binária em sua emplementação) e seus modos de otimização, como "Alpha-Beta" e o "algorítimo" Negamax, semelha-
+nte ao minimax, apenas diferente na implementação.
+
+** O jogo se parece com um jogo da velha, sobretudo com algumas alterações: são apenas 3 peças por jogador, e caso ocorra um "empate", nesta etapa, eles podem ir movendo suas peças, em seus
+turnos, com a meta de tentar formar 3 peças consecutivas na horizontal ou vertical.
+
+** O primeiro problema que a equipe encontrou é que o jogo nao tem um fim determinado, como o jogo da velha (seu irmão mais próximo), e desta forma, no algorítmo MiniMax terá que ser atribuído
+pontuações intermiárias ainda nao definidas de acordo com possiveis estratégias do jogo.
+
+** Estudamos o que é fator médio de ramificação, e percebemos, que parar este jogo, o fator médio seria no máximo 9, entao, considerando que o computador faz 10000 interações
+por segundo, o computador conseguiria analizar 5 jogadas a frente da atual, em 6 segundos de processamento, o que é relativamente efetivo, consideranto que o fator medio de
+ramificação no jogo diminui, então este tempo poderia variar entre 6 a 0,5 segundos, conforme nossas contas.
+
+**Estudamos o jogo THREE MEN'S MORRIS e suas estratégias, para desta forma, decidir como será feita a escolha de pontuações no algoritmo ultizado para a AI do jogo. A princípio
+atribuir-se-a a vitória +10 pontos, derrota -10 pontos, empate 0; e durante a implementação pretendemos conseguir analizar melhor se este metodo de pontuação foi ou nao eficaz,
+e como arruma-lo, caso nao tenha sido.
+
+Tipos de tabuleiro:
+
+A)
+  | |
+-------
+  | |
+-------
+  | |
+
+B)
+*-*-*-*-*
+| || || |
+*-*-*-*-*
+| || || |
+*-*-*-*-*
+| || || |
+*-*-*-*-*
